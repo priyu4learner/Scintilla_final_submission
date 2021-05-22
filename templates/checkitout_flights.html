@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/c90223af6b.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Services</title>
+</head>
+<style>
+    .bod {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-flow: column;
+        background-color: rgb(252, 245, 245);
+        box-shadow: gray 5px 5px;
+    }
+
+    .hea {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 3rem;
+        margin-top: 50px;
+        color: rgb(34, 59, 8);
+        font-weight: bold;
+    }
+
+    .card {
+        border-radius: 20px;
+        box-shadow: gray 5px 5px;
+    }
+    .forum{
+        margin: 32px 32px;
+        padding: 23px 23px;
+        background-color: yellow;
+        width:60vh;
+
+    }
+    .in{
+        margin: 10px;
+
+    }
+    .input:hover{
+        background-color: blanchedalmond;
+    }
+</style>
+
+<body>
+    <!---------------------------navigation bar--------------------------->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Scintilla</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href={{url_for('home')}}>Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="link"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+
+                            <li>
+                                <a href={{url_for('chk_accommodation')}} class="dropdown-item" target="_blank">Accommodation</a>
+                            </li>
+                            <li><a href={{url_for('chk_flight')}} class="dropdown-item">Transport</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href={{url_for('place')}}>Tour</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="link"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Places
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <li>
+                                <h6 class="dropdown-header">States</h6>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Andhra Pradesh</a> <a href=""
+                                    class="dropdown-item">West Bengal</a></li>
+                            <li><a class="dropdown-item" href="#">Arunachal Pradesh</a></li>
+                            <li><a class="dropdown-item" href="#">Assam</a></li>
+                            <li><a class="dropdown-item" href="#">Bihar</a></li>
+                            <li><a class="dropdown-item" href="#">Goa</a></li>
+                            <li><a class="dropdown-item" href={{url_for('gujarat')}}>Gujarat</a></li>
+                            <li><a class="dropdown-item" href="#">Jharkhand</a></li>
+                            <li><a href={{url_for('kerala')}} class="dropdown-item">Kerala</a></li>
+                            <li><a href={{url_for('maharashtra')}} class="dropdown-item">Maharashtra</a></li>
+                            <li><a href="" class="dropdown-item">Manipur</a></li>
+                            <li><a href="" class="dropdown-item">Nagaland</a></li>
+                            <li><a href="" class="dropdown-item">Orissa</a></li>
+                            <li><a href="" class="dropdown-item">Punjab</a></li>
+                            <li><a href="" class="dropdown-item">Rajasthan</a></li>
+                            <li><a href="" class="dropdown-item">Uttar Pradesh</a></li>
+                            <li><a href="" class="dropdown-item">Uttarakhand</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!----------------------------carousel-------------------------->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../static/web5.jpg" class="d-block w-100" alt="...">
+            </div>
+
+        </div>
+    </div>
+    <!---------------------------heading--------------------------->
+
+    <section class="py-0 text-center container" id="top">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto my-0">
+                <h1 class="fw-bold" style="font-family: 'dm-derif-display';text-align: center; font-size: 3rem;">
+                    Search Flights</h1>
+                <hr>
+                <h2 class="fw-bold"
+                    style="font-family: 'dm-derif-display';text-align: center; font-size: 2rem; color: rgb(150, 37, 37);">
+                    At your convenience always...</h2>
+                <p style="float: right;">
+                    <hr>
+                    <button class="btn btn-outline-danger" style="float: right;"> <a href="#foot">Top to
+                            back</a></button>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!---------------------------content--------------------------->
+    <div class="container forum" style="margin:0 auto">
+        <h1>Search</h1>
+        <hr>
+        <form action="" id="form" method="post">
+            <div class="in"> <label for="dest_name">From </label></div>
+            <div class="in"><input type="text" placeholder=" Search..." id="dest_name" name="From"></div>
+            <div class="in"><label for="check_in">To </label></div>
+            <div class="in"><input type="text" placeholder=" Search... " id="dest_name" name="To"></div>
+            <div class="in"><label for="no_room">Passengers</label>
+                <select name="" id="">
+                    <option value="">Passengers</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+            </div>
+
+             <div>
+                 <input data-href={{url_for('hotel')}} type="submit" class="btn btn-light" placeholder="">
+             </div>
+
+
+        </form>
+        </div>
+        <!---------------------------upper footer--------------------------->
+        <footer class="text-muted py-5 my-3">
+            <div class="container">
+                <p class="float-end mb-1">
+                    <a href="#">Back to top</a>
+                </p>
+
+        </footer>
+        <!---------------------------lower foooter--------------------------->
+        <footer class="my-0 pt-5 text-muted text-center text-small  bg-dark" id="foot">
+            <p class="mb-1">&copy; 2021-2021 Travaholic</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+        </footer>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

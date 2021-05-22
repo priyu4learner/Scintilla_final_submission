@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Travaholic</title>
+</head>
+<style>
+    .box1,.box2,.box3{
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        margin: 20px;
+    }
+    .card:hover{
+        border: 3px solid black;
+        opacity: 0.7;
+        box-shadow: gray 4px 4px 4px 4px;
+        border-radius: 5px;
+    }
+    @media screen and (max-width:765px) {
+        .box1,.box2,.box3{
+            flex-flow: column;
+        }
+    }
+    @media screen and (max-width:350px){
+        .card{
+            width: 18rem;
+        }
+    } 
+
+</style>
+
+<body>
+    <!----------------------------------navigation bar------------------------------>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Travaholic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href={{url_for('home')}}}>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href={{url_for('place')}}>Tour</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href={{url_for('chk_accommodation')}}>Accommodation</a></li>
+                            <li><a class="dropdown-item" href={{url_for('chk_flight')}}>Transport</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+     <!--------------------------------bread crumb------------------------------>
+    <nav style="--bs-breadcrumb-divider: '>';background-color: rgb(212, 199, 199);margin-top: 56px;"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item ">PLace</li>
+            <li class="breadcrumb-item active" aria-current="page">Page 1</li>
+        </ol>
+    </nav>
+     <!----------------------------------heading------------------------------>
+    <section class="py-5 text-center container" id="top">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Open your world</h1>
+                <p class="lead text-muted">and read here to know about different states of India.</p>
+                <p style="float: right;">
+                    <a href="#foot">Top to back</a>
+                </p>
+            </div>
+        </div>
+    </section>
+     <!----------------------------------content------------------------------>
+    <div class="box1">
+        <div class="card" style="width: 20rem;" >
+            <img src="../static/kerala.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-outline-primary">Click here</a>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+            <img src="../static/maharashtra.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-outline-primary">Click here</a>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+            <img src="../static/maharashtra.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-outline-primary">Click here</a>
+            </div>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="card" style="width: 20rem;" >
+            <img src="../static/kerala.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-outline-primary">Click here</a>
+            </div>
+        </div>/
+        <div class="card" style="width: 20rem;">
+            <img src="../static/maharashtra.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-outline-primary">Click here</a>
+            </div>3
+            +
+        </div>
+        <div class="card" style="width: 20rem;">
+            <img src="../static/maharashtra.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-outline-primary">Click here</a>
+            </div>
+        </div>
+    </div>
+    <div class="box3">
+        <div class="card" style="width: 20rem;" >
+            <img src="../static/kerala.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-outline-primary">Click here</a>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+            <img src="../static/maharashtra.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-outline-primary">Click here</a>
+            </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+            <img src="../static/maharashtra.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-outline-primary">Click here</a>
+            </div>
+        </div>
+    </div>
+     <!----------------------------------upper footer------------------------------>
+    <footer class="text-muted py-5 my-3">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                  <a href={{url_for('place')}}><button type="button" class="btn btn-primary">1</button></a>
+                  <a href={{url_for('place3')}}><button type="button" class="btn btn-primary">2</button></a>
+                
+                </div>
+        </div>
+    </footer>
+     <!----------------------------------lower footer------------------------------>
+    <footer class="my-5 pt-5 text-muted text-center text-small  bg-dark" id="foot">
+        <p class="mb-1">&copy; 2021-2021 Travaholic</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

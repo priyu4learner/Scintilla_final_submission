@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>TRAVAHOLIC</title>
+</head>
+<style>
+    .bod {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-flow: column;
+        background-color: rgb(252, 245, 245);
+        box-shadow: gray 5px 5px;
+    }
+    .hea{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 3rem;
+        margin-top: 50px;
+        color: rgb(34, 59, 8);
+        font-weight: bold;
+    }
+    .card{
+        border-radius: 20px;
+        box-shadow: gray 5px 5px;
+    }
+</style>
+
+<body>
+    <!---------------------------navigation bar--------------------------->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Travaholic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href={{url_for('home')}}}>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href={{url_for('place')}}>Tour</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href={{url_for('chk_accommodation')}}>Accommodation</a></li>
+                            <li><a class="dropdown-item" href={{url_for('chk_flight')}}>Transport</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!----------------------------carousel-------------------------->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../static/spirit1.jpg" class="d-block w-100" alt="...">
+            </div>
+
+        </div>
+    </div>
+    <!---------------------------heading--------------------------->
+    <section class="py-0 text-center container" id="top">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto my-0">
+                <h1 class="fw-bold" style="font-family: 'dm-derif-display';text-align: center; font-size: 5rem;">
+                    SPIRITUAL</h1>
+                <hr>
+                <h2 class="fw-bold"
+                    style="font-family: 'dm-derif-display';text-align: center; font-size: 3rem; color: rgb(150, 37, 37);">
+                    Celebration of Diverse Beliefs</h2>
+                <p style="float: right;">
+                    <hr>
+                    <button class="btn btn-outline-danger" style="float: right;"> <a href="#foot">Top to
+                            back</a></button>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!---------------------------content--------------------------->
+    <div class="bod container">
+        <h2 style="color: rgb(156, 52, 52);"> Pilgrims Progress</h2>
+        <p>India is its billion people. And it is safe to say that these people define what spirituality in India is.
+            The most prominent religions in the country are Hinduism, Islam, Christianity, Buddhism, Sikhism and
+            Jainism. Apart from these there are several other schools of thoughts. The country is filled with many
+            spiritual destinations which should not be missed by anyone looking for the true Indian experience. These
+            are open and welcome to everyone.
+        </p>
+        <p></p>
+        <p></p>
+        <h1 style="color: rgb(90, 7, 7);">Door to Divinity</h1>
+        <h3>From opulent temples and mosques to marvellous churches, resplendent gurudwaras and serene monasteries,
+            India is the home of holiness.
+
+        </h3>
+    </div>
+    <div class="hea">Popular Spiritual Destinations In India</div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mx-5 my-5">
+        <div class="col">
+            <div class="card h-100">
+                <img src="../static/varanasi.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Varanasi</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="../static/badrinath.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Badrinath</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="../static/amritsar.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Amritsar</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mx-5 my-5">
+        <div class="col">
+            <div class="card h-100">
+                <img src="../static/madurai.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Madurai</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="../static/rameshwara.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Rameswara</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="../static/haridwar.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Haridwar</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------upper footer--------------------------->
+    <footer class="text-muted py-5 my-3">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+
+    </footer>
+    <!---------------------------lower foooter--------------------------->
+    <footer class="my-0 pt-5 text-muted text-center text-small  bg-dark" id="foot">
+        <p class="mb-1">&copy; 2021-2021 Travaholic</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

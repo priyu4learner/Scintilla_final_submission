@@ -1,0 +1,38 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi","Hi there","Hello", "I'm Anisha","I'm Priya", "How are you?","How do you do?", "Good morning","Hey","Greetings", "Good day","Whatcha doin"],
+         "responses": ["Hi","Hello","Hey","Hello, thanks for asking", "Hi,I'm doing good.", "Hi there, how can I help?"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye","bye","Bye-Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["Bye","Later, then.","See you!", "Have a nice day", "Bye! Come back again soon.","Visit again"]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
+        },
+        {"tag": "help",
+         "patterns": ["What can you do", "Information about you", "Tell me something about you","How can you help me?","Help me","Special features"],
+         "responses": ["You can plan your trip with us.", "Plan your trip together with us!", "Solve your travel queries with us."]
+        },
+        {"tag": "service",
+         "patterns": ["What services do you provide?","Services", "What can you do", "Information about you", "Your plans and services","How can you help me?"],
+         "responses": ["Accommodation, lodging, discover your dream destination!","Lodging and transport related queries can be answered.","You can search for hotels and flights to your destination."]
+        },
+        {"tag": "invalid",
+         "patterns": ["Marry me","I love You","date me","chat with me","I am bored"],
+         "responses": ["Please ask organisation related query."]
+        },
+        {"tag": "noans",
+         "patterns": ["why","how","when","I","you","are"],
+         "responses": ["Can't Understand Your Question","please elaborate your question"]
+        },
+        {"tag": "name",
+         "patterns": ["what is your name?","what should I call you?","How are you called?", "What can I call you?","Your name"],
+         "responses": ["I'm Travao.","Hey!I'm Travao","Travao, your trip advisor."]
+        }
+]}
